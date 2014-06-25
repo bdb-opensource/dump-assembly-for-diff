@@ -1,7 +1,9 @@
 # dump-assembly-for-diff
 
 
-Dump .NET assemblies to text so you can compare them with your favorite diff tool
+Dump .NET assemblies to text so you can compare them with your favorite diff tool.
+
+The output doesn't include the full IL code (which would be a horror to inspect anyway). Instead, it includes general metadata including function and type signatures and other fields. Generally the output should be different on any code change even if no signatures changed.
 
 It can be used in conjunction with .gitattributes to allow diffing assembly binaries when using git (useful for verifying deployments that use git).
 
